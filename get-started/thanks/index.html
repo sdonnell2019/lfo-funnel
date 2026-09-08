@@ -12,8 +12,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://player.vimeo.com">
 <link href="https://fonts.googleapis.com/css2?family=Poly:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/css/funnel.css?v=20260908h">
-<script src="../../assets/js/pixel.js?v=20260908h"></script>
+<link rel="stylesheet" href="../../assets/css/funnel.css?v=20260908i">
+<script src="../../assets/js/pixel.js?v=20260908i"></script>
 </head>
 <body data-step="thanks">
 
@@ -26,7 +26,9 @@
 </header>
 
 <!-- ======================================================================
-     CONFIRMATION + ADD TO CALENDAR
+     The job of this page is to make the call feel worth showing up to.
+     Booking logistics are handled by GHL's confirmation email, so there is
+     no add-to-calendar widget competing with the proof.
      ====================================================================== -->
 <section class="thanks">
   <div class="wrap">
@@ -35,103 +37,110 @@
       <i>Application</i> <i>&mdash;</i> <i>Pick a time</i> <i>&mdash;</i> <b>Confirmed</b>
     </p>
 
-    <div class="thanks-tick" aria-hidden="true">
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-           stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="m4 12.5 5 5L20 6.5"/>
-      </svg>
-    </div>
+    <p class="eyebrow">Your call is booked</p>
 
-    <h1 class="display">Add this call<br>to your calendar<span class="dot">.</span></h1>
+    <h1 class="display">Real businesses.<br>Real numbers<span class="dot">.</span></h1>
 
     <p class="book-lede">
-      You're all set<span data-firstname></span>. Your confirmation and video link are
-      on their way to your inbox &mdash; block the time out now so nothing lands on top of it.
+      You're all set<span data-firstname></span> &mdash; the invite is on its way to your
+      inbox. Before we speak, this is what the system has actually produced for
+      businesses like yours.
     </p>
 
-    <div class="addcal">
-      <a class="cta" data-gcal href="#" target="_blank" rel="noopener">Add to Google Calendar</a>
-      <a class="cta cta--ghost" data-ical href="#">Add to iCal / Outlook</a>
-    </div>
-  </div>
-</section>
-
-<!-- ======================================================================
-     PREP VIDEO
-     ====================================================================== -->
-<section class="prep">
-  <div class="wrap">
-    <p class="eyebrow">Watch this video</p>
-    <h2 class="prep-h">So you can show up prepared</h2>
-
-    <div class="vsl" data-vsl="1091665323">
-      <iframe
-        title="What is Lighthouse For Others?"
-        allow="autoplay; fullscreen; picture-in-picture"
-        allowfullscreen
-        loading="eager"
-        referrerpolicy="strict-origin-when-cross-origin"></iframe>
-
-      <button type="button" class="vsl-tap" aria-label="Tap for sound">
-        <span class="vsl-tap-pill">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M3 10v4a1 1 0 0 0 1 1h3l4 4V5L7 9H4a1 1 0 0 0-1 1Z"/>
-            <path d="M16.5 8.5a5 5 0 0 1 0 7 1 1 0 0 0 1.4 1.42 7 7 0 0 0 0-9.9 1 1 0 1 0-1.4 1.41Z"/>
-          </svg>
-          Tap for Sound
-        </span>
-      </button>
-    </div>
-
-    <ul class="checks">
-      <li>Have a rough idea of your monthly revenue and marketing spend to hand</li>
-      <li>Know which platforms you're currently posting on, if any</li>
-      <li>Take the call somewhere quiet &mdash; it only needs 30 minutes</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ======================================================================
-     CASE STUDIES — the post-booking page's real job: warm them up before
-     the call. Results only; the source doc's internal notes on why each
-     engagement ended are deliberately not published.
-     ====================================================================== -->
-<section class="sec sec--tight" id="case-studies">
-  <div class="wrap">
-    <p class="eyebrow">While you wait</p>
-    <h2 class="h-sec">Real businesses.<br>Real numbers.</h2>
-    <p class="cs-lede">
-      A sample of what the system has produced &mdash; across men's health, roofing,
-      real estate, ecommerce, plumbing, pest control and one of the largest
-      Latin-owned food companies in America.
-    </p>
-
-    <!-- headline stat strip -->
     <div class="cs-stats">
       <div class="cs-stat"><span class="cs-stat-n">1.8B</span><span class="cs-stat-l">Organic views generated</span></div>
       <div class="cs-stat"><span class="cs-stat-n">2.6M</span><span class="cs-stat-l">Followers gained</span></div>
       <div class="cs-stat"><span class="cs-stat-n">5</span><span class="cs-stat-l">Years, longest client</span></div>
     </div>
+  </div>
+</section>
 
-    <!-- ---- flagship, with client interview ---- -->
-    <article class="cs cs--feature">
-      <p class="cs-cat">Men's health &amp; telehealth</p>
-      <h3 class="cs-name">OverTime Men's Health</h3>
-      <p class="cs-hook">One Tampa clinic &rarr; eight-figure national telehealth company</p>
-      <div class="case-media">
-        <iframe src="https://player.vimeo.com/video/1086807044?title=0&byline=0&portrait=0&badge=0&dnt=1"
-                title="OverTime Men's Health — client interview"
-                allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-      </div>
-      <ul class="cs-pts">
-        <li><b>50M+</b> views and <b>60k+</b> followers from a standing start with no existing content</li>
-        <li>Grew from a single brick-and-mortar location to a national telehealth business</li>
-        <li>Celebrity partnerships including Dan Bilzerian and Alex Eubank</li>
-        <li>Consulted both founders to a combined <b>600k+</b> personal following</li>
-      </ul>
-    </article>
+<!-- ======================================================================
+     TESTIMONIALS — clients in their own words
+     ====================================================================== -->
+<section class="sec sec--tight">
+  <div class="wrap">
+    <p class="eyebrow">In their own words</p>
+    <h2 class="h-sec">Hear it from<br>the clients</h2>
+
+    <div class="tst">
+      <figure class="tst-i">
+        <div class="case-media">
+          <iframe src="https://player.vimeo.com/video/1086807044?title=0&byline=0&portrait=0&badge=0&dnt=1"
+                  title="OverTime Men's Health — client interview"
+                  allow="fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>OverTime Men's Health</b>
+          <span>One Tampa clinic to an eight-figure national telehealth company</span>
+        </figcaption>
+      </figure>
+
+      <figure class="tst-i">
+        <div class="case-media">
+          <iframe src="https://player.vimeo.com/video/1174379643?title=0&byline=0&portrait=0&badge=0&dnt=1"
+                  title="Alpha Gentlemen Suits — client interview"
+                  allow="fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Alpha Gentlemen Suits</b>
+          <span>0 to 55k+ followers in 3 months, and a waitlist for $2,500 suits</span>
+        </figcaption>
+      </figure>
+
+      <figure class="tst-i">
+        <div class="case-media">
+          <iframe src="https://player.vimeo.com/video/1183315920?title=0&byline=0&portrait=0&badge=0&dnt=1"
+                  title="GOYA Cares — testimonial"
+                  allow="fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>GOYA Cares</b>
+          <span>100M+ views across two years of awareness campaigns</span>
+        </figcaption>
+      </figure>
+
+      <figure class="tst-i">
+        <div class="case-media">
+          <iframe src="https://player.vimeo.com/video/1183315968?title=0&byline=0&portrait=0&badge=0&dnt=1"
+                  title="Megan and Josh Steinberger — testimonial"
+                  allow="fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Megan &amp; Josh Steinberger</b>
+          <span>10k to 60k+ in a single month once we found the structure</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================
+     CASE STUDIES — results only. The source doc's internal notes on why
+     each engagement ended are deliberately not published.
+     ====================================================================== -->
+<section class="sec sec--tight" id="case-studies">
+  <div class="wrap">
+    <p class="eyebrow">Case studies</p>
+    <h2 class="h-sec">What it looks like<br>across industries</h2>
+    <p class="cs-lede">
+      Men's health, roofing, real estate, ecommerce, plumbing, pest control, and
+      one of the largest Latin-owned food companies in America.
+    </p>
 
     <div class="cs-grid">
+
+      <article class="cs">
+        <p class="cs-cat">Men's health &amp; telehealth</p>
+        <h3 class="cs-name">OverTime Men's Health</h3>
+        <p class="cs-hook">One clinic &rarr; eight-figure national company</p>
+        <ul class="cs-pts">
+          <li><b>50M+</b> views and <b>60k+</b> followers from a standing start with no existing content</li>
+          <li>Grew from a single brick-and-mortar location to a national telehealth business</li>
+          <li>Celebrity partnerships including Dan Bilzerian and Alex Eubank</li>
+          <li>Consulted both founders to a combined <b>600k+</b> personal following</li>
+        </ul>
+      </article>
 
       <article class="cs">
         <p class="cs-cat">Roofing &amp; door-to-door</p>
@@ -149,11 +158,6 @@
         <p class="cs-cat">Ecommerce &mdash; suits</p>
         <h3 class="cs-name">Alpha Gentlemen Suits</h3>
         <p class="cs-hook">So much inbound he opened a waitlist</p>
-        <div class="case-media">
-          <iframe src="https://player.vimeo.com/video/1174379643?title=0&byline=0&portrait=0&badge=0&dnt=1"
-                  title="Alpha Gentlemen Suits — client interview"
-                  allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-        </div>
         <ul class="cs-pts">
           <li><b>0 &rarr; 55k+</b> followers in 3 months</li>
           <li>Organic inbound suit inquiries at a <b>$2,500</b> average ticket</li>
@@ -190,11 +194,6 @@
         <p class="cs-cat">Food &mdash; enterprise</p>
         <h3 class="cs-name">GOYA Cares</h3>
         <p class="cs-hook">100M+ views for a cause campaign</p>
-        <div class="case-media">
-          <iframe src="https://player.vimeo.com/video/1183315920?title=0&byline=0&portrait=0&badge=0&dnt=1"
-                  title="GOYA Cares — testimonial"
-                  allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-        </div>
         <ul class="cs-pts">
           <li>Worked with GOYA Cares, the human-trafficking awareness initiative</li>
           <li><b>100M+</b> views across two years of campaigns</li>
@@ -217,11 +216,6 @@
         <p class="cs-cat">Cooking &amp; creator</p>
         <h3 class="cs-name">Megan Steinberger</h3>
         <p class="cs-hook">10k to 60k+ in a single month</p>
-        <div class="case-media">
-          <iframe src="https://player.vimeo.com/video/1183315968?title=0&byline=0&portrait=0&badge=0&dnt=1"
-                  title="Megan Steinberger — testimonial"
-                  allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-        </div>
         <ul class="cs-pts">
           <li>Grew to <b>10k</b> over three to four months of cooking content</li>
           <li>Then <b>10k &rarr; 60k+</b> in one month once we found the winning structure</li>
@@ -295,10 +289,45 @@
     </div>
 
     <div class="guarantee">
-      <p class="guarantee-k">Your Guarantee</p>
+      <p class="guarantee-k">What we'll commit to on the call</p>
       <p class="guarantee-n">3,000,000 Views</p>
       <p class="guarantee-p">In your first 3 months &mdash; or you don't pay.</p>
     </div>
+  </div>
+</section>
+
+<!-- ======================================================================
+     PREP — kept because it lifts show-up rate, but placed after the proof
+     ====================================================================== -->
+<section class="prep">
+  <div class="wrap">
+    <p class="eyebrow">Before your call</p>
+    <h2 class="prep-h">So you show up<br>prepared</h2>
+
+    <div class="vsl" data-vsl="1091665323">
+      <iframe
+        title="What is Lighthouse For Others?"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+      <button type="button" class="vsl-tap" aria-label="Tap for sound">
+        <span class="vsl-tap-pill">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M3 10v4a1 1 0 0 0 1 1h3l4 4V5L7 9H4a1 1 0 0 0-1 1Z"/>
+            <path d="M16.5 8.5a5 5 0 0 1 0 7 1 1 0 0 0 1.4 1.42 7 7 0 0 0 0-9.9 1 1 0 1 0-1.4 1.41Z"/>
+          </svg>
+          Tap for Sound
+        </span>
+      </button>
+    </div>
+
+    <ul class="checks">
+      <li>Have a rough idea of your monthly revenue and marketing spend to hand</li>
+      <li>Know which platforms you're currently posting on, if any</li>
+      <li>Take the call somewhere quiet &mdash; it only needs 30 minutes</li>
+    </ul>
   </div>
 </section>
 
@@ -309,11 +338,11 @@
     </p>
     <p class="foot-p">By booking a call, I agree to the Privacy Policy and Terms of Service, and consent to receive communication via any of the information provided above.</p>
     <p class="foot-p">All appointments we take are recorded for quality and training purposes. By booking and attending an appointment with Lighthouse For Others you give consent for us to record the conversation.</p>
-    <p class="foot-p">All results shared are real but do not represent typical results. Client outcomes vary according to their commitment, market conditions and countless other variables. No guarantee of income or success is expressly made or implied.</p>
+    <p class="foot-p">All results shared are real but do not represent typical results. Client outcomes vary according to their commitment, market conditions and countless other variables. The results shared are from our most dedicated clients and are not indicative of typical or average results. No guarantee of income or success is expressly made or implied.</p>
     <p class="foot-c">LIGHTHOUSE FOR OTHERS &copy; 2026 All Rights Reserved</p>
   </div>
 </footer>
 
-<script src="../../assets/js/funnel.js?v=20260908h" defer></script>
+<script src="../../assets/js/funnel.js?v=20260908i" defer></script>
 </body>
 </html>

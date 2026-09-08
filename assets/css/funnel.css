@@ -1086,6 +1086,28 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   color: var(--muted);
 }
 
+/* ---- video testimonials ---- */
+.tst { display: grid; gap: 26px; margin-top: 26px; }
+.tst-i { margin: 0; }
+.tst-i figcaption {
+  display: block;
+  padding: 13px 2px 0;
+}
+.tst-i figcaption b {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -.2px;
+  color: var(--text);
+}
+.tst-i figcaption span {
+  display: block;
+  margin-top: 3px;
+  font-size: 13.5px;
+  line-height: 1.4;
+  color: var(--accent-soft);
+}
+
 .cs-grid { display: grid; gap: 0; }
 
 .cs {
@@ -1204,7 +1226,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .book-h { font-size: 54px; line-height: 52px; letter-spacing: -2px; margin-bottom: 32px; }
   .cal-shell { max-width: 900px; margin: 0 auto; padding: 0 var(--pad); }
 
-  /* case studies: two columns, feature spans full width */
+  /* case studies + testimonials: two columns */
+  .tst { grid-template-columns: 1fr 1fr; gap: 34px; }
   .cs-stats { gap: 14px; max-width: 720px; margin-left: auto; margin-right: auto; }
   .cs-stat-n { font-size: 34px; }
   .cs-stat-l { font-size: 13px; }

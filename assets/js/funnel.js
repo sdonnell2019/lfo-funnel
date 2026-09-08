@@ -574,6 +574,10 @@
       try { sessionStorage.setItem('lfo_lead', JSON.stringify(stored)); } catch (_) {}
     }
 
+    /* Add-to-calendar buttons were removed from step 3 — the page is now a
+       proof page, and GHL's confirmation email carries the invite. Everything
+       above this line (Schedule pixel event, `booked` webhook) still runs.
+       Kept intact so the buttons can be restored by re-adding the elements. */
     var gcal = $('[data-gcal]');
     var ical = $('[data-ical]');
     if (!gcal && !ical) return;
