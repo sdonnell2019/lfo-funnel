@@ -1046,6 +1046,107 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 
 /* ==========================================================================
+   CASE STUDIES (post-booking page)
+   ========================================================================== */
+.cs-lede {
+  margin: 16px auto 0;
+  max-width: 620px;
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--muted);
+}
+
+.cs-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 26px 0 8px;
+}
+.cs-stat {
+  padding: 14px 8px 15px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--card-2);
+  text-align: center;
+}
+.cs-stat-n {
+  display: block;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -1px;
+  color: var(--accent);
+}
+.cs-stat-l {
+  display: block;
+  margin-top: 6px;
+  font-size: 11.5px;
+  line-height: 1.3;
+  color: var(--muted);
+}
+
+.cs-grid { display: grid; gap: 0; }
+
+.cs {
+  padding: 26px 0 28px;
+  border-top: 1px solid var(--line);
+}
+.cs--feature {
+  margin-top: 30px;
+  padding: 22px 18px 24px;
+  border: 1px solid var(--line-accent);
+  border-radius: 6px;
+  background:
+    radial-gradient(120% 100% at 50% 0%, rgba(79,182,232,.16), transparent 70%),
+    var(--card-2);
+}
+.cs--feature + .cs-grid .cs:first-child { border-top: 0; }
+
+.cs-cat {
+  margin: 0 0 5px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.cs-name {
+  margin: 0 0 4px;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -.5px;
+}
+.cs-hook {
+  margin: 0 0 15px;
+  font-family: var(--serif);
+  font-size: 19px;
+  line-height: 1.2;
+  letter-spacing: -.5px;
+  color: var(--accent-soft);
+}
+.cs .case-media { margin-bottom: 15px; }
+
+.cs-pts { margin: 0; padding: 0; list-style: none; }
+.cs-pts li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 9px;
+  font-size: 14.5px;
+  line-height: 1.4;
+  color: #d6d6d6;
+}
+.cs-pts li::before {
+  content: "";
+  position: absolute; left: 2px; top: 8px;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.cs-pts b { color: var(--text); font-weight: 700; }
+
+/* ==========================================================================
    TABLET / DESKTOP SCALE-UP
    ========================================================================== */
 @media (min-width: 600px) {
@@ -1102,6 +1203,17 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .book-logo { height: 38px; margin-bottom: 22px; }
   .book-h { font-size: 54px; line-height: 52px; letter-spacing: -2px; margin-bottom: 32px; }
   .cal-shell { max-width: 900px; margin: 0 auto; padding: 0 var(--pad); }
+
+  /* case studies: two columns, feature spans full width */
+  .cs-stats { gap: 14px; max-width: 720px; margin-left: auto; margin-right: auto; }
+  .cs-stat-n { font-size: 34px; }
+  .cs-stat-l { font-size: 13px; }
+  .cs-lede { font-size: 17px; }
+  .cs--feature { padding: 30px 30px 32px; }
+  .cs-grid { grid-template-columns: 1fr 1fr; gap: 0 34px; }
+  .cs-grid .cs:nth-child(2) { border-top: 0; }
+  .cs-name { font-size: 24px; }
+  .cs-hook { font-size: 22px; }
   .book { padding: 44px 0 70px; }
   .checks { max-width: 560px; margin: 28px auto 0; }
 }
