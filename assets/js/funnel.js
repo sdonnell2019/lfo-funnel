@@ -54,7 +54,7 @@
   /* Which funnel step this page is. Set via <body data-step="…">.
      This gates the conversion events: without it, the step-3 initialiser
      runs on every page and fires Schedule on the landing page, which would
-     wreck campaign optimisation. */
+     wreck campaign optimization. */
   var STEP = document.body ? (document.body.getAttribute('data-step') || '') : '';
 
   /* ======================================================================
@@ -541,7 +541,7 @@
      6. Step 3 — add-to-calendar links
      ====================================================================== */
   function initThanks() {
-    /* Hard gate. Schedule is the conversion event campaigns optimise for —
+    /* Hard gate. Schedule is the conversion event campaigns optimize for —
        it must fire on this page and nowhere else. */
     if (STEP !== 'thanks') return;
 
@@ -551,7 +551,7 @@
     var hi = $('[data-firstname]');
     if (hi && stored.first_name) hi.textContent = ', ' + stored.first_name;
 
-    /* This is the real conversion — a call actually on the calendar. Optimise
+    /* This is the real conversion — a call actually on the calendar. Optimize
        your Meta campaigns for Schedule, not Lead. */
     if (window.lfoIdentify) window.lfoIdentify(stored);
     track('Schedule', {
