@@ -30,9 +30,11 @@
        for finer-grained drop-off data at the cost of more CRM writes. */
     partialThrottleMs: 45000,
 
-    /* Funnel step URLs */
-    stepBook:   '/get-started/book/',
-    stepThanks: '/get-started/thanks/',
+    /* Funnel step paths, relative to wherever the site is mounted.
+       BASE (computed below) turns these into real URLs, so the funnel works
+       served from a domain root OR from a subpath like /lfo-funnel/. */
+    stepBook:   'get-started/book/',
+    stepThanks: 'get-started/thanks/',
 
     /* GHL calendar — Luke's Calendar (30 min). Widget id from the embed code. */
     ghlCalendarId: 'KjdM4H052HH3RCIGuB1M',
@@ -54,6 +56,27 @@
      runs on every page and fires Schedule on the landing page, which would
      wreck campaign optimisation. */
   var STEP = document.body ? (document.body.getAttribute('data-step') || '') : '';
+
+  /* ======================================================================
+     Where the site is mounted. On a custom domain this is '/', on GitHub
+     Pages it's '/lfo-funnel/'. Derived from the current path so the step
+     redirects land correctly either way.
+     ====================================================================== */
+  var BASE = (function () {
+    var p = location.pathname;
+    var i = p.indexOf('/get-started/');
+    if (i >= 0) return p.slice(0, i + 1);
+    var m = p.match(/^(.*\/)(privacy|terms)\/?$/);
+    if (m) return m[1];
+    return p.replace(/[^\/]*$/, '');
+  })();
+
+  /* Absolute URL for a funnel path. Named stepUrl, not url, because
+     post(url, ...) below takes a parameter of that name and would shadow it. */
+  function stepUrl(rel) {
+    return BASE + String(rel).replace(/^\/+/, '');
+  }
+  window.LFO_BASE = BASE;
 
   /* ======================================================================
      Attribution — read once, persist for the whole session.
@@ -434,7 +457,7 @@
           email:      lead.email      || '',
           phone:      lead.phone      || ''
         });
-        location.href = CONFIG.stepBook + '?' + p.toString();
+        location.href = stepUrl(CONFIG.stepBook) + '?' + p.toString();
       };
 
       if (CONFIG.leadWebhook) {
@@ -509,7 +532,7 @@
          there. */
       var target = e.data[1] || '';
       if (target.indexOf(CONFIG.stepThanks) === -1) {
-        setTimeout(function () { location.href = CONFIG.stepThanks; }, 300);
+        setTimeout(function () { location.href = stepUrl(CONFIG.stepThanks); }, 300);
       }
     });
   }
@@ -559,7 +582,7 @@
     var details =
       'Your 30-minute discovery call with the Lighthouse For Others team.\n\n' +
       'Check your email for the confirmation and the video link.\n\n' +
-      'Before the call, watch the short video at ' + location.origin + CONFIG.stepThanks;
+      'Before the call, watch the short video at ' + location.origin + stepUrl(CONFIG.stepThanks);
 
     /* We need the booked slot to build a dated calendar file. GHL doesn't
        append it automatically — you put it in the calendar's redirect URL
