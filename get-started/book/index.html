@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Just Pick a Time — Lighthouse For Others</title>
+<meta name="theme-color" content="#0e0e0e">
+<meta name="robots" content="noindex, nofollow">
+
+<link rel="icon" href="/assets/img/lfo_logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://api.leadconnectorhq.com">
+<link rel="preconnect" href="https://link.msgsndr.com">
+<link href="https://fonts.googleapis.com/css2?family=Poly:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/funnel.css?v=20260908f">
+<script src="/assets/js/pixel.js?v=20260908f"></script>
+</head>
+<body data-step="book">
+
+<!-- ======================================================================
+     STEP 2 — nothing but logo, promise and calendar.
+     Matched to the reference booking page: no step indicator, no lede, no
+     bullet list. On a 390px screen the calendar starts ~100px down, so the
+     visitor lands on the thing they came to do instead of more reading.
+     ====================================================================== -->
+<section class="book">
+  <div class="book-head">
+    <img class="book-logo" src="/assets/img/lfo_logo.png"
+         alt="Lighthouse For Others" width="758" height="284">
+    <h1 class="book-h">Just Pick a Time</h1>
+  </div>
+
+  <!-- GHL booking widget. funnel.js rewrites the src with the lead's name,
+       email and phone so they don't retype what they just gave us.
+       form_embed.js handles auto-resize and, when the calendar's confirmation
+       is set to redirect, navigates the parent to step 3.
+
+       No card styling here on purpose — the widget renders its own white
+       rounded card, exactly as it does on the reference page. Wrapping it in
+       a second card gives you a card inside a card. -->
+  <div class="cal-shell">
+    <iframe id="ghl-calendar"
+            data-booking="KjdM4H052HH3RCIGuB1M"
+            src="about:blank"
+            title="Book your discovery call"
+            allow="payment"
+            scrolling="no"></iframe>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-nav">
+      <a href="/privacy/">Privacy</a><span>|</span><a href="/terms/">Terms of Service</a><span>|</span><a href="mailto:management@lighthouseforothers.com">Contact Us</a>
+    </p>
+    <p class="foot-p">By booking a call, I agree to the Privacy Policy and Terms of Service, and consent to receive communication via any of the information provided above.</p>
+    <p class="foot-p">All appointments we take are recorded for quality and training purposes. By booking and attending an appointment with Lighthouse For Others you give consent for us to record the conversation.</p>
+    <p class="foot-p">All results shared are real but do not represent typical results. Client outcomes vary according to their commitment, market conditions and countless other variables. No guarantee of income or success is expressly made or implied.</p>
+    <p class="foot-c">LIGHTHOUSE FOR OTHERS &copy; 2026 All Rights Reserved</p>
+  </div>
+</footer>
+
+<script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+<script src="/assets/js/funnel.js?v=20260908f" defer></script>
+</body>
+</html>

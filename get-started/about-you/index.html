@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lighthouse For Others — 3 Million Views in 3 Months Guaranteed</title>
+<meta name="description" content="We guarantee 3,000,000 organic views in your first 3 months — or you don't pay. Lighthouse For Others installs and runs your organic content system end to end.">
+<meta name="theme-color" content="#0e0e0e">
+<meta name="robots" content="noindex, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lighthouse For Others — 3 Million Views in 3 Months Guaranteed">
+<meta property="og:description" content="3,000,000 organic views in your first 3 months, or you don't pay.">
+<meta property="og:image" content="/assets/img/lfo_logo.png">
+
+<link rel="icon" href="/assets/img/lfo_logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://player.vimeo.com">
+<link href="https://fonts.googleapis.com/css2?family=Poly:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/funnel.css?v=20260908f">
+<script src="/assets/js/pixel.js?v=20260908f"></script>
+</head>
+<body data-step="apply">
+
+<!-- ======================================================================
+     HERO — logo · promise · VSL · CTA
+     ====================================================================== -->
+<header class="hero">
+  <div class="wrap">
+    <div class="brandbar">
+      <img src="/assets/img/lfo_logo.png" alt="Lighthouse For Others" width="758" height="284">
+    </div>
+
+    <!-- the <br> keeps a balanced two-line rag on desktop; mobile wraps it
+         to three lines on its own -->
+    <h1 class="display">
+      3 Million Views<br>in 3 Months <em>Guaranteed</em><span class="dot">.</span>
+    </h1>
+
+    <!-- VSL: starts silent + looping, tap swaps in sound and controls -->
+    <div class="vsl" data-vsl="1223439033">
+      <iframe
+        title="Lighthouse For Others — how the system works"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+        loading="eager"
+        referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+      <button type="button" class="vsl-tap" aria-label="Tap for sound">
+        <span class="vsl-tap-pill">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M3 10v4a1 1 0 0 0 1 1h3l4 4V5L7 9H4a1 1 0 0 0-1 1Z"/>
+            <path d="M16.5 8.5a5 5 0 0 1 0 7 1 1 0 0 0 1.4 1.42 7 7 0 0 0 0-9.9 1 1 0 1 0-1.4 1.41Z"/>
+          </svg>
+          Tap for Sound
+        </span>
+      </button>
+    </div>
+
+    <div class="hero-cta">
+      <a class="cta" href="#form">See if you qualify</a>
+    </div>
+  </div>
+</header>
+
+<!-- ======================================================================
+     STEP 1 FORM — qualification
+     Sits directly under the hero CTA: the logo marquee that used to live
+     here was pushing the form ~112px down the page, below the mobile fold.
+     It now runs after the press strip instead.
+     ====================================================================== -->
+<section class="formzone" id="form">
+  <div class="wrap">
+    <form class="formcard" id="qualify" novalidate>
+
+      <div class="field field-row">
+        <div>
+          <label class="vh" for="first_name">First name</label>
+          <input class="inp" id="first_name" name="first_name" type="text"
+                 autocomplete="given-name" placeholder="First Name*" data-required>
+        </div>
+        <div>
+          <label class="vh" for="last_name">Last name</label>
+          <input class="inp" id="last_name" name="last_name" type="text"
+                 autocomplete="family-name" placeholder="Last Name*" data-required>
+        </div>
+      </div>
+
+      <div class="field inp-icon">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6L22 7"/>
+        </svg>
+        <label class="vh" for="email">Business email</label>
+        <input class="inp" id="email" name="email" type="email" inputmode="email"
+               autocomplete="email" placeholder="Business Email*" data-required>
+      </div>
+
+      <div class="field">
+        <label class="vh" for="phone">Phone</label>
+        <div class="phone">
+          <span class="phone-cc"><span class="flag">🇺🇸</span> +1</span>
+          <input class="inp" id="phone" name="phone" type="tel" inputmode="tel"
+                 autocomplete="tel" placeholder="Phone*" data-required>
+        </div>
+      </div>
+
+      <p class="qlabel" id="lbl-biz">Tell us about your business <span class="req">*</span></p>
+      <textarea class="ta" name="business" rows="2" aria-labelledby="lbl-biz"
+                placeholder="What you do, who you serve, and what you want social to do for you"
+                data-required></textarea>
+
+      <p class="qlabel" id="lbl-rev">Monthly Revenue (Approximate): <span class="req">*</span></p>
+      <div class="opts" role="radiogroup" aria-labelledby="lbl-rev" data-required-group="revenue">
+        <label class="opt"><input type="radio" name="revenue" value="Less than $10k /mo"><span>Less than $10k /mo</span></label>
+        <label class="opt"><input type="radio" name="revenue" value="$10k-$50k /mo"><span>$10k&ndash;$50k /mo</span></label>
+        <label class="opt"><input type="radio" name="revenue" value="$50k-$100k /mo"><span>$50k&ndash;$100k /mo</span></label>
+        <label class="opt"><input type="radio" name="revenue" value="$100k-$500k /mo"><span>$100k&ndash;$500k /mo</span></label>
+        <label class="opt"><input type="radio" name="revenue" value="$500k+ /mo"><span>$500k+ /mo</span></label>
+      </div>
+
+      <p class="qlabel" id="lbl-spend">Marketing Spend (Approximate): <span class="req">*</span></p>
+      <div class="opts" role="radiogroup" aria-labelledby="lbl-spend" data-required-group="spend">
+        <label class="opt"><input type="radio" name="spend" value="Under $3k /mo"><span>Under $3k /mo</span></label>
+        <label class="opt"><input type="radio" name="spend" value="$3-10k /mo"><span>$3&ndash;10k /mo</span></label>
+        <label class="opt"><input type="radio" name="spend" value="$10-100k /mo"><span>$10&ndash;100k /mo</span></label>
+        <label class="opt"><input type="radio" name="spend" value="$100k-500k /mo"><span>$100k&ndash;500k /mo</span></label>
+        <label class="opt"><input type="radio" name="spend" value="$500k+ /mo"><span>$500k+ /mo</span></label>
+      </div>
+
+      <p class="qlabel" id="lbl-start">When will you be able to start on social media? <span class="req">*</span></p>
+      <div class="opts" role="radiogroup" aria-labelledby="lbl-start" data-required-group="start">
+        <label class="opt"><input type="radio" name="start" value="Now"><span>Now</span></label>
+        <label class="opt"><input type="radio" name="start" value="Within 30 days"><span>Within 30 days</span></label>
+        <label class="opt"><input type="radio" name="start" value="30 days or more"><span>30 days or more</span></label>
+        <label class="opt"><input type="radio" name="start" value="Next quarter or later"><span>Next quarter or later</span></label>
+      </div>
+
+      <button class="form-submit" type="submit">Get Started</button>
+      <p class="form-err" hidden role="alert"></p>
+
+      <p class="form-fine">
+        By submitting, you agree to our <a href="/privacy/">Privacy Policy</a> and
+        <a href="/terms/">Terms of Service</a>, and consent to be contacted using the
+        details above.
+      </p>
+    </form>
+  </div>
+</section>
+
+<!-- ======================================================================
+     PRESS
+     ====================================================================== -->
+<section class="press">
+  <div class="wrap">
+    <p class="press-label">As featured in</p>
+    <img src="/assets/img/badges_black.png" alt="Featured in Yahoo, Daily Mail and BuzzFeed"
+         width="1920" height="360" loading="lazy">
+  </div>
+</section>
+
+<!-- ======================================================================
+     LOGO MARQUEE — brands the founder has created for.
+     Moved below the form so it doesn't push the form off the mobile fold.
+     ====================================================================== -->
+<section class="marquee" aria-label="Brands we have created content for">
+  <p class="marquee-label">Built by someone who did it himself</p>
+  <div class="marquee-track">
+    <img src="/assets/img/bumble.png" alt="Bumble" loading="lazy"><img src="/assets/img/goya.png" alt="Goya" loading="lazy"><img src="/assets/img/meta.png" alt="Meta" loading="lazy"><img src="/assets/img/toyota.png" alt="Toyota" loading="lazy">
+    <img src="/assets/img/bumble.png" alt="" loading="lazy"><img src="/assets/img/goya.png" alt="" loading="lazy"><img src="/assets/img/meta.png" alt="" loading="lazy"><img src="/assets/img/toyota.png" alt="" loading="lazy">
+    <img src="/assets/img/bumble.png" alt="" loading="lazy"><img src="/assets/img/goya.png" alt="" loading="lazy"><img src="/assets/img/meta.png" alt="" loading="lazy"><img src="/assets/img/toyota.png" alt="" loading="lazy">
+    <img src="/assets/img/bumble.png" alt="" aria-hidden="true" loading="lazy"><img src="/assets/img/goya.png" alt="" aria-hidden="true" loading="lazy"><img src="/assets/img/meta.png" alt="" aria-hidden="true" loading="lazy"><img src="/assets/img/toyota.png" alt="" aria-hidden="true" loading="lazy">
+    <img src="/assets/img/bumble.png" alt="" aria-hidden="true" loading="lazy"><img src="/assets/img/goya.png" alt="" aria-hidden="true" loading="lazy"><img src="/assets/img/meta.png" alt="" aria-hidden="true" loading="lazy"><img src="/assets/img/toyota.png" alt="" aria-hidden="true" loading="lazy">
+    <img src="/assets/img/bumble.png" alt="" aria-hidden="true" loading="lazy"><img src="/assets/img/goya.png" alt="" aria-hidden="true" loading="lazy"><img src="/assets/img/meta.png" alt="" aria-hidden="true" loading="lazy"><img src="/assets/img/toyota.png" alt="" aria-hidden="true" loading="lazy">
+  </div>
+</section>
+
+<!-- ======================================================================
+     STATS
+     ====================================================================== -->
+<section class="sec sec--tight">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat">
+        <p class="stat-k">Reach</p>
+        <h2 class="stat-v"><span data-count="1.8" data-suffix="B" data-dp="1">1.8B</span></h2>
+        <p class="stat-d">Organic views generated for our clients</p>
+      </div>
+      <div class="stat">
+        <p class="stat-k">Audience</p>
+        <h2 class="stat-v"><span data-count="2.6" data-suffix="M" data-dp="1">2.6M</span></h2>
+        <p class="stat-d">Followers gained for our clients</p>
+      </div>
+      <div class="stat">
+        <p class="stat-k">Founder</p>
+        <h2 class="stat-v"><span data-count="2" data-suffix="M" data-dp="0">2M</span></h2>
+        <p class="stat-d">Followers Anthony built from zero in 12 months</p>
+      </div>
+      <div class="stat">
+        <p class="stat-k">Platforms</p>
+        <h2 class="stat-v"><span data-count="5" data-dp="0">5</span></h2>
+        <p class="stat-d">Instagram, TikTok, YouTube, Facebook &amp; Snapchat &mdash; every post, every one</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================
+     PROBLEM
+     ====================================================================== -->
+<section class="sec sec--tight">
+  <div class="wrap">
+    <h2 class="h-sec">Your content isn't bad.<br>It's just unstructured.</h2>
+    <div class="probs">
+      <div class="prob"><span class="prob-x">&times;</span>Posting inconsistently</div>
+      <div class="prob"><span class="prob-x">&times;</span>Guessing what will go viral</div>
+      <div class="prob"><span class="prob-x">&times;</span>Getting views with no sales</div>
+      <div class="prob"><span class="prob-x">&times;</span>Wasting time on content that dies</div>
+    </div>
+    <p class="prob-kicker">Virality isn't luck.<br>It's pattern recognition and volume.</p>
+  </div>
+</section>
+
+<!-- ======================================================================
+     PROCESS — the Remix Strategy
+     ====================================================================== -->
+<section class="sec">
+  <div class="sec-rule"></div>
+  <div class="wrap" style="padding-top:42px">
+    <h2 class="h-sec">We scale your business<br>with organic content</h2>
+    <p class="h-sub">Generate attention. Convert leads. Drive revenue. Guaranteed.</p>
+
+    <div class="proc">
+      <div class="step step--l">
+        <div class="step-rail"><span class="step-line"></span><span class="step-n">1</span></div>
+        <div class="step-body">
+          <h3 class="step-h">Identify viral content in your niche</h3>
+          <p class="step-p">We audit your market and pull the content that is already winning in your industry. That becomes the foundation for a strategy built on evidence instead of opinion.</p>
+        </div>
+      </div>
+
+      <div class="step step--r">
+        <div class="step-rail"><span class="step-line"></span><span class="step-n">2</span></div>
+        <div class="step-body">
+          <h3 class="step-h">Extract winning structures</h3>
+          <p class="step-p">We break the winners down to the mechanics &mdash; hook, pacing, payoff, format &mdash; and identify the repeatable patterns behind why they travel.</p>
+        </div>
+      </div>
+
+      <div class="step step--l">
+        <div class="step-rail"><span class="step-line"></span><span class="step-n">3</span></div>
+        <div class="step-body">
+          <h3 class="step-h">Adapt them to your brand</h3>
+          <p class="step-p">We remix those proven formats around what you actually do, so the content sounds like you and still carries the structure that earns reach.</p>
+        </div>
+      </div>
+
+      <div class="step step--r">
+        <div class="step-rail"><span class="step-line"></span><span class="step-n">4</span></div>
+        <div class="step-body">
+          <h3 class="step-h">Test at volume</h3>
+          <p class="step-p">We produce and publish consistently across all five platforms. Volume is what turns guesswork into data &mdash; and what a video dies on one platform, it often takes off on another.</p>
+        </div>
+      </div>
+
+      <div class="step step--l">
+        <div class="step-rail"><span class="step-line"></span><span class="step-n">5</span></div>
+        <div class="step-body">
+          <h3 class="step-h">Scale winners</h3>
+          <p class="step-p">We double down hard on what performs, compounding the formats that drive views, followers and inbound instead of starting over every week.</p>
+        </div>
+      </div>
+
+      <div class="step step--r">
+        <div class="step-rail"><span class="step-line"></span><span class="step-n">6</span></div>
+        <div class="step-body">
+          <h3 class="step-h">Innovate with data</h3>
+          <p class="step-p">You get full transparency into performance so you can see targets being hit. The system evolves off real results &mdash; all backed by our 3-month guarantee.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="proc-fine">100% organic. No celebrity giveaways. No fake engagement.</p>
+    <a class="cta" href="#form">See if you qualify</a>
+
+    <!-- guarantee banner -->
+    <div class="guarantee">
+      <p class="guarantee-k">The Guarantee</p>
+      <p class="guarantee-n">3,000,000 Views</p>
+      <p class="guarantee-p">In your first 3 months &mdash; or you don't pay.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================
+     CASE STUDIES
+     ====================================================================== -->
+<section class="sec sec--tight">
+  <div class="wrap">
+    <p class="cases-lede">Real businesses. Real reach.<br>From views &rarr; leads &rarr; revenue.</p>
+
+    <div class="cases">
+
+      <article class="case">
+        <p class="case-name">OverTime Men's Health</p>
+        <p class="case-tag">Nationwide growth via organic reach</p>
+        <div class="case-media">
+          <iframe
+            src="https://player.vimeo.com/video/1086807044?title=0&byline=0&portrait=0&badge=0&dnt=1"
+            title="OverTime Men's Health case study"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+        <ul class="case-pts">
+          <li>Brand awareness built across multiple locations</li>
+          <li>Patient acquisition driven by organic content</li>
+          <li>Full viral content strategy run end to end</li>
+        </ul>
+      </article>
+
+      <article class="case">
+        <p class="case-name">GameDay Men's Health</p>
+        <p class="case-tag">Outperformed 300+ locations</p>
+        <div class="case-panel">
+          <p class="case-panel-t">#1 of 300+<br>locations</p>
+        </div>
+        <ul class="case-pts">
+          <li>Became the top performing location in a national franchise</li>
+          <li>Won on organic social media dominance, not ad budget</li>
+          <li>One location, the same system</li>
+        </ul>
+      </article>
+
+      <article class="case">
+        <p class="case-name">Megan Steinberger</p>
+        <p class="case-tag">Brand deals + explosive follower growth</p>
+        <div class="case-panel">
+          <p class="case-panel-t">Unknown &rarr;<br>influencer</p>
+        </div>
+        <ul class="case-pts">
+          <li>Went from unknown to a recognized creator</li>
+          <li>Consistent viral content instead of one-off hits</li>
+          <li>Strategic brand partnerships followed the reach</li>
+        </ul>
+      </article>
+
+      <article class="case">
+        <p class="case-name">NextGen Restoration</p>
+        <p class="case-tag">National recognition</p>
+        <div class="case-panel">
+          <p class="case-panel-t">Category<br>authority</p>
+        </div>
+        <ul class="case-pts">
+          <li>Established industry authority in a quiet niche</li>
+          <li>Qualified leads generated through educational content</li>
+          <li>National recognition from a standing start</li>
+        </ul>
+      </article>
+
+      <article class="case">
+        <p class="case-name">Service Businesses &amp; Creators</p>
+        <p class="case-tag">Scaling visibility</p>
+        <div class="case-panel">
+          <p class="case-panel-t">Millions<br>of views</p>
+        </div>
+        <ul class="case-pts">
+          <li>Local businesses and personal brands</li>
+          <li>Reach measured in millions, not hundreds</li>
+          <li>Proven content systems, installed and run for them</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================
+     PULL QUOTE
+     ====================================================================== -->
+<section class="pull">
+  <div class="wrap">
+    <p class="pull-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+    <p class="pull-q">"Virality isn't luck.<br>It's pattern recognition<br>and volume."</p>
+    <p class="pull-a">Anthony Bertoncin &mdash; Founder, Lighthouse For Others</p>
+  </div>
+</section>
+
+<!-- ======================================================================
+     WHAT WE HANDLE + FOUNDER
+     ====================================================================== -->
+<section class="sec sec--tight">
+  <div class="wrap">
+    <p class="eyebrow">What we handle for you</p>
+    <h2 class="h-sec">You don't need a team.<br>You need the system.</h2>
+
+    <div class="handles">
+      <div class="handle">
+        <h3 class="handle-h">Strategy + Ideation</h3>
+        <p class="handle-p">We identify viral patterns and build a content roadmap tailored to your business.</p>
+      </div>
+      <div class="handle">
+        <h3 class="handle-h">Filming / Production</h3>
+        <p class="handle-p">We handle all production needs, or guide you through a simple filming process.</p>
+      </div>
+      <div class="handle">
+        <h3 class="handle-h">Editing + Optimization</h3>
+        <p class="handle-p">We turn raw footage into scroll-stopping, platform-optimized content.</p>
+      </div>
+      <div class="handle">
+        <h3 class="handle-h">Posting + Management</h3>
+        <p class="handle-p">We handle scheduling, publishing and continuous optimization across all platforms.</p>
+      </div>
+    </div>
+
+    <p class="handles-fine">
+      You don't need a team. You don't need to learn content.
+      <span>We install the system and run it for you.</span>
+    </p>
+
+    <!-- founder -->
+    <div class="founder">
+      <img class="founder-photo" src="/assets/img/founder.jpg"
+           alt="Anthony Bertoncin, Founder of Lighthouse For Others"
+           width="900" height="600" loading="lazy">
+      <div class="founder-in">
+        <h3 class="founder-n">Anthony Bertoncin</h3>
+        <p class="founder-r">Founder, Lighthouse For Others</p>
+
+        <ul class="tl">
+          <li>Creating since 13</li>
+          <li>Short-form breakthrough at 19</li>
+          <li>0 &rarr; 2M followers in 12 months</li>
+          <li>Businesses asked for help</li>
+          <li>Lighthouse For Others was built</li>
+        </ul>
+
+        <p class="founder-p">Anthony built his personal brand from zero to two million followers in 12 months using the exact system now run at Lighthouse For Others. After businesses started reaching out for help, he formalized the process and began scaling organic reach for service businesses and creators.</p>
+
+        <p class="founder-note">You speak directly with our team.</p>
+
+        <a class="cta cta--wide" href="#form">See if you qualify</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================
+     FAQ
+     ====================================================================== -->
+<section class="sec">
+  <div class="wrap">
+    <h2 class="h-sec">You've got questions<br>We've got answers</h2>
+
+    <div class="faq">
+
+      <div class="faq-i">
+        <button class="faq-q" type="button">
+          <span class="faq-plus" aria-hidden="true"></span>
+          <span class="faq-qt">What do you do?</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-in">
+          <p>We install and run your organic content system end to end &mdash; strategy and ideation, filming or production, editing and platform optimization, then posting and daily management across Instagram, TikTok, YouTube, Facebook and Snapchat.</p>
+          <p>We turn what you're <em>already</em> doing into short-form content that actually gets consumed, using proven viral structures and a repeatable organic system.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-i">
+        <button class="faq-q" type="button">
+          <span class="faq-plus" aria-hidden="true"></span>
+          <span class="faq-qt">Why social media?</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-in">
+          <p>Because organic is the only channel where distribution isn't rented. Ads stop producing the day you stop paying for them. A content system compounds &mdash; every video adds to a library that keeps generating reach, trust and inbound long after it's published.</p>
+          <p>Without a strong presence, you're the world's best-kept secret. Businesses running ads with no organic presence have traffic but no trust; organic is what makes everything else convert.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-i">
+        <button class="faq-q" type="button">
+          <span class="faq-plus" aria-hidden="true"></span>
+          <span class="faq-qt">How do I know this will work for me?</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-in">
+          <p>We have a proven track record across a wide range of industries &mdash; from roofing companies and cooking influencers to men's health clinics, plumbers, realtors, celebrities and chefs. No matter your industry, our expertise and tailored approach are built to generate results for your business too.</p>
+          <p>In fact, when we enter industries that lack a strong social media presence, we often see rapid success simply because there's less competition. <strong>If nobody in your space is doing this yet, that's not a red flag &mdash; it's a rare opportunity.</strong></p>
+        </div></div>
+      </div>
+
+      <div class="faq-i">
+        <button class="faq-q" type="button">
+          <span class="faq-plus" aria-hidden="true"></span>
+          <span class="faq-qt">How does the guarantee work?</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-in">
+          <p><strong>3,000,000 organic views in your first 3 months, or you don't pay.</strong></p>
+          <p>We can carry that risk because we've run this system enough times to know what it produces. Anthony took his own account from zero to two million followers in 12 months with it, and we've generated 1.8 billion organic views for clients since. Depending on your industry you'll typically start seeing results inside the first 30 days &mdash; and the longer the system runs, the faster you grow.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-i">
+        <button class="faq-q" type="button">
+          <span class="faq-plus" aria-hidden="true"></span>
+          <span class="faq-qt">What makes this different from the other options?</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-in">
+          <p>Most agencies sell you content. We install a system. We don't invent ideas from scratch and hope &mdash; we run the <strong>Remix Strategy</strong>: find what's already going viral in your niche, extract the structure, adapt it to your brand, test at volume, then scale the winners with data.</p>
+          <p>It's 100% organic &mdash; no celebrity giveaways, no fake engagement, no bought followers. And you speak directly with our team, not an outsourced call center.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-i">
+        <button class="faq-q" type="button">
+          <span class="faq-plus" aria-hidden="true"></span>
+          <span class="faq-qt">What do I need to do next?</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-in">
+          <p>Fill in the short form above. If it's a fit, you'll go straight to the calendar and pick a 30-minute slot. On that call we'll look at your business, walk you through exactly what we'd run, and tell you honestly whether organic can move the needle for you.</p>
+          <p>Once we start, your only responsibility is showing up on film days, engaging with comments, and joining our regular touch-point meetings. We handle the rest.</p>
+        </div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================
+     CLOSER
+     ====================================================================== -->
+<section class="closer">
+  <span class="closer-wm" aria-hidden="true">3M</span>
+  <div class="wrap">
+    <h2 class="display">3 Million Views<br>in 3 Months<br><em>Guaranteed</em><span class="dot">.</span></h2>
+    <a class="cta" href="#form">Get started</a>
+  </div>
+</section>
+
+<!-- ======================================================================
+     FOOTER
+     ====================================================================== -->
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-nav">
+      <a href="/privacy/">Privacy</a><span>|</span><a href="/terms/">Terms of Service</a><span>|</span><a href="mailto:management@lighthouseforothers.com">Contact Us</a>
+    </p>
+    <p class="foot-p">By booking a call, I agree to the Privacy Policy and Terms of Service, and consent to receive communication via any of the information provided above.</p>
+    <p class="foot-p">All appointments we take are recorded for quality and training purposes. By booking and attending an appointment with Lighthouse For Others you give consent for us to record the conversation.</p>
+    <p class="foot-p">All results shared are real but do not represent typical results. Client outcomes vary according to their commitment, market conditions and countless other variables. The results shared are from our most dedicated clients and are not indicative of typical or average results. No guarantee of income or success is expressly made or implied. The 3,000,000-view guarantee is subject to the terms of our client agreement, including the filming and touch-point commitments described above.</p>
+    <p class="foot-c">LIGHTHOUSE FOR OTHERS &copy; 2026 All Rights Reserved</p>
+  </div>
+</footer>
+
+<script src="/assets/js/funnel.js?v=20260908f" defer></script>
+</body>
+</html>
