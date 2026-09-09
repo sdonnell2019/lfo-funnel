@@ -1,0 +1,28 @@
+# Static site — no build step. Netlify serves the repo as-is.
+[build]
+  publish = "."
+  command = ""
+
+# Directory URLs resolve to index.html automatically; these keep the funnel
+# reachable if someone drops the trailing slash.
+[[redirects]]
+  from = "/get-started"
+  to = "/get-started/about-you/"
+  status = 301
+
+[[redirects]]
+  from = "/apply"
+  to = "/get-started/about-you/"
+  status = 301
+
+# Long-cache the versioned assets, never cache the HTML, so a deploy is
+# visible immediately but repeat visitors don't refetch CSS/JS.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
