@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Meta Pixel — loader + event helpers
+   Meta Pixel, loader + event helpers
    Loaded in <head> (not deferred) so PageView fires as early as possible.
 
    ── SET THIS ──────────────────────────────────────────────────────────────
@@ -43,7 +43,7 @@
   window.lfoEventId = eventId;
 
   if (!PIXEL_ID) {
-    // No pixel configured — expose no-ops so callers never have to guard.
+    // No pixel configured, expose no-ops so callers never have to guard.
     window.lfoTrack = function (name) {
       if (DEBUG) console.log('[lfo pixel: not configured]', name);
     };
@@ -69,7 +69,7 @@
      Advanced matching. Re-initialising with the visitor's details lets Meta
      match the conversion to a real account, which materially improves
      attribution and lowers CPL. The pixel hashes these client-side before
-     they leave the browser — raw values are never transmitted.
+     they leave the browser, raw values are never transmitted.
      ---------------------------------------------------------------------- */
   window.lfoIdentify = function (d) {
     if (!d) return;

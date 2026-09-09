@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Lighthouse For Others — Funnel
+   Lighthouse For Others Funnel
    Structure/design cloned 1:1 from the reference funnel; brand + copy is LFO.
    MOBILE FIRST: every base rule targets a ~390px viewport. Media queries
    only scale UP. ~90% of traffic is mobile.
@@ -12,7 +12,7 @@
   --card:          #131313;
   --card-2:        #101010;
 
-  /* LFO brand — lighthouse beam blue (from lighthouseforothers.com) */
+  /* LFO brand: lighthouse beam blue (from lighthouseforothers.com) */
   --accent:        #99d9f5;
   --accent-deep:   #4fb6e8;
   --accent-dark:   #1c6c93;
@@ -52,7 +52,7 @@ body {
   overflow-x: hidden;
 }
 
-/* height:auto is load-bearing — the intrinsic `height` attributes on the
+/* height:auto is load-bearing, the intrinsic `height` attributes on the
    logo/badge <img>s would otherwise stretch them into tall empty boxes. */
 img { max-width: 100%; height: auto; display: block; border: 0; }
 a { color: inherit; text-decoration: none; }
@@ -886,7 +886,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   white-space: nowrap;
   z-index: 0;
 }
-/* only the content wrap gets lifted — the watermark must stay absolute */
+/* only the content wrap gets lifted, the watermark must stay absolute */
 .closer > .wrap { position: relative; z-index: 1; }
 .closer .display { font-size: 46px; line-height: 46px; }
 .closer .cta { margin-top: 28px; }
@@ -923,7 +923,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 
 /* ==========================================================================
-   STEP 2 — BOOK
+   STEP 2, BOOK
    ========================================================================== */
 /* ---- step 2 layout, measured against the reference at 390px ----
    logo top 15 · heading top 46 · calendar top 100 · 15px side gutters.
@@ -934,7 +934,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 /* The reference uses a 16px-tall single-line wordmark. The LFO mark is
    stacked ("Lighthouse" over "for Others"), so 16px makes the second line
-   unreadable — 24px is the smallest that still reads, and the margin is
+   unreadable, 24px is the smallest that still reads, and the margin is
    trimmed to land the calendar at the same place on screen. */
 .book-logo {
   height: 24px;
@@ -963,7 +963,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 .book-lede strong { color: var(--accent-soft); }
 
-/* Transparent on purpose — the GHL widget draws its own white rounded card,
+/* Transparent on purpose, the GHL widget draws its own white rounded card,
    same as on the reference page. Adding a card here nests one inside another. */
 .cal-shell {
   padding: 0 15px;
@@ -995,7 +995,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .book-steps i { font-style: normal; opacity: .45; }
 
 /* ==========================================================================
-   STEP 3 — THANKS
+   STEP 3, THANKS
    ========================================================================== */
 .thanks { padding: 30px 0 20px; }
 .thanks-tick {
@@ -1248,7 +1248,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .step-h { font-size: 30px; }
   .step--l .step-body { margin-left: 50%; padding-left: 46px; }
   .step--r .step-body { margin-right: 50%; padding-right: 46px; }
-  /* the spine moves to the middle of the column — both selectors need the
+  /* the spine moves to the middle of the column, both selectors need the
      two-class specificity of the mobile rules they're overriding */
   .step--l .step-rail,
   .step--r .step-rail {

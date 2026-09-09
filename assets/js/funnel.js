@@ -1,16 +1,16 @@
 /* ==========================================================================
-   Lighthouse For Others — Funnel behaviour
+   Lighthouse For Others, Funnel behavior
    VSL tap-to-unmute · FAQ accordion · qualification form · stat count-up
    ========================================================================== */
 (function () {
   'use strict';
 
   /* ------------------------------------------------------------------------
-     CONFIG — the only block you need to touch
+     CONFIG, the only block you need to touch
      ------------------------------------------------------------------------ */
   var CONFIG = {
     /* Where step 1 sends the lead. Leave '' and the funnel still works
-       (lead is kept in sessionStorage and passed to the calendar) — but nothing
+       (lead is kept in sessionStorage and passed to the calendar), but nothing
        reaches your CRM. Drop in a GoHighLevel / Zapier / Make inbound
        webhook URL to capture every submission. */
     leadWebhook: 'https://services.leadconnectorhq.com/hooks/OYVI9OmXcn3l0iz3AYz1/webhook-trigger/f7cd0d6e-8ad4-4252-ba07-026f35021a69',
@@ -22,7 +22,7 @@
     partialWebhook: 'https://services.leadconnectorhq.com/hooks/OYVI9OmXcn3l0iz3AYz1/webhook-trigger/f7cd0d6e-8ad4-4252-ba07-026f35021a69',
 
     /* Don't send a partial until we have something we could actually contact
-       them with — a record with only a first name is noise. */
+       them with, a record with only a first name is noise. */
     partialNeedsContact: true,
 
     /* Minimum gap between partial updates for one visitor. The first partial
@@ -36,7 +36,7 @@
     stepBook:   'get-started/book/',
     stepThanks: 'get-started/thanks/',
 
-    /* GHL calendar — Luke's Calendar (30 min). Widget id from the embed code. */
+    /* GHL calendar, Luke's Calendar (30 min). Widget id from the embed code. */
     ghlCalendarId: 'KjdM4H052HH3RCIGuB1M',
 
     /* Hero VSL (Vimeo id) */
@@ -52,7 +52,7 @@
   var sid   = function () { return window.lfoSessionId ? window.lfoSessionId() : ''; };
 
   /* Which funnel step this page is. Set via <body data-step="…">.
-     This gates the conversion events: without it, the step-3 initialiser
+     This gates the conversion events: without it, the step-3 initializer
      runs on every page and fires Schedule on the landing page, which would
      wreck campaign optimization. */
   var STEP = document.body ? (document.body.getAttribute('data-step') || '') : '';
@@ -79,7 +79,7 @@
   window.LFO_BASE = BASE;
 
   /* ======================================================================
-     Attribution — read once, persist for the whole session.
+     Attribution, read once, persist for the whole session.
      Steps 2 and 3 have no ad params in their URL, so without stashing these
      the click source is lost the moment the visitor leaves step 1.
      ====================================================================== */
@@ -107,7 +107,7 @@
 
   /* ======================================================================
      Delivery. `beacon` uses sendBeacon, which is the only transport that
-     reliably survives the page being closed — required for abandonment.
+     reliably survives the page being closed, required for abandonment.
      ====================================================================== */
   function post(url, payload, beacon) {
     if (!url) return Promise.resolve();
@@ -131,7 +131,7 @@
   }
 
   /* ======================================================================
-     1. Hero VSL — muted autoplay loop, then tap for sound
+     1. Hero VSL, muted autoplay loop, then tap for sound
      ====================================================================== */
   function initVSL() {
     var shell = $('[data-vsl]');
@@ -286,7 +286,7 @@
         event: event,
         session_id: sid(),
         fields_filled: filled,
-        /* CRMs map flat strings, not arrays — GHL can't do anything useful
+        /* CRMs map flat strings, not arrays, GHL can't do anything useful
            with fields_filled, so send a joined copy alongside it. */
         fields_filled_csv: filled.join(', '),
         fields_total: FIELDS.length,
@@ -317,12 +317,12 @@
 
       if (event === 'abandoned') {
         /* pagehide and visibilitychange both fire on a single navigation, so
-           collapse identical back-to-back sends — but stay able to re-fire
+           collapse identical back-to-back sends, but stay able to re-fire
            later if they tab away, come back, type more, then leave for good. */
         if (sig === lastSig && lastEvent === 'abandoned' && now - lastSentAt < 3000) return;
       } else {
         /* Throttle on TIME, not content. Content changes on every field, so a
-           signature check never throttles — someone filling all eight fields
+           signature check never throttles, someone filling all eight fields
            would push eight partials into the CRM for one person. Send the
            first one immediately (so a lead who vanishes instantly is still
            captured), then at most one update per interval. The abandonment
@@ -338,7 +338,7 @@
       post(CONFIG.partialWebhook, payload, beacon);
 
       /* The webhook wants every update (it's the latest-state record), but the
-         pixel wants one event per visitor — otherwise a single person filling
+         pixel wants one event per visitor, otherwise a single person filling
          eight fields fires eight PartialLeads and skews the audience counts. */
       if (!partialTracked) {
         partialTracked = true;
@@ -382,8 +382,8 @@
       sendPartial('partial_progress', false);
     });
 
-    /* Abandonment. pagehide is the reliable one on iOS Safari — where most
-       of this traffic lands — because it fires on tab switch and back/forward
+    /* Abandonment. pagehide is the reliable one on iOS Safari, where most
+       of this traffic lands, because it fires on tab switch and back/forward
        navigation where unload does not. */
     function onLeave() {
       if (submitted) return;
@@ -472,7 +472,7 @@
   }
 
   /* ======================================================================
-     5. Step 2 — GHL booking widget, prefilled, with post-booking hand-off
+     5. Step 2, GHL booking widget, prefilled, with post-booking hand-off
      ====================================================================== */
   function initCalendar() {
     if (STEP !== 'book') return;
@@ -490,7 +490,7 @@
 
     /* Verified against the live widget: first_name, last_name, email and phone
        all prefill. calendar_notes does NOT accept a query param, so the
-       business description isn't passed here — it already reaches the CRM via
+       business description isn't passed here, it already reaches the CRM via
        the lead webhook. */
     var id  = frame.getAttribute('data-booking') || CONFIG.ghlCalendarId;
     var url = new URL('https://api.leadconnectorhq.com/widget/booking/' + id);
@@ -513,13 +513,13 @@
     track('ViewBookingPage', {}, { custom: true });
 
     /* GHL's widget doesn't emit a "booking complete" event. What it does emit
-       — when the calendar's confirmation is set to redirect — is
+      when the calendar's confirmation is set to redirect, is
        ['modify-parent-url', url], which form_embed.js turns into a parent
        navigation. We listen for the same message purely to fire the pixel
        before the page unloads; form_embed.js still does the navigating.
 
        Note the payload is a plain ARRAY, not the {event:…} object Calendly
-       uses — GHL indexes into e.data[0]. */
+       uses, GHL indexes into e.data[0]. */
     window.addEventListener('message', function (e) {
       if (!Array.isArray(e.data)) return;
       if (e.data[0] !== 'modify-parent-url') return;
@@ -538,10 +538,10 @@
   }
 
   /* ======================================================================
-     6. Step 3 — add-to-calendar links
+     6. Step 3, add-to-calendar links
      ====================================================================== */
   function initThanks() {
-    /* Hard gate. Schedule is the conversion event campaigns optimize for —
+    /* Hard gate. Schedule is the conversion event campaigns optimize for,
        it must fire on this page and nowhere else. */
     if (STEP !== 'thanks') return;
 
@@ -551,7 +551,7 @@
     var hi = $('[data-firstname]');
     if (hi && stored.first_name) hi.textContent = ', ' + stored.first_name;
 
-    /* This is the real conversion — a call actually on the calendar. Optimize
+    /* This is the real conversion, a call actually on the calendar. Optimize
        your Meta campaigns for Schedule, not Lead. */
     if (window.lfoIdentify) window.lfoIdentify(stored);
     track('Schedule', {
@@ -574,7 +574,7 @@
       try { sessionStorage.setItem('lfo_lead', JSON.stringify(stored)); } catch (_) {}
     }
 
-    /* Add-to-calendar buttons were removed from step 3 — the page is now a
+    /* Add-to-calendar buttons were removed from step 3, the page is now a
        proof page, and GHL's confirmation email carries the invite. Everything
        above this line (Schedule pixel event, `booked` webhook) still runs.
        Kept intact so the buttons can be restored by re-adding the elements. */
@@ -582,14 +582,14 @@
     var ical = $('[data-ical]');
     if (!gcal && !ical) return;
 
-    var title = 'Discovery Call — Lighthouse For Others';
+    var title = 'Discovery Call with Lighthouse For Others';
     var details =
       'Your 30-minute discovery call with the Lighthouse For Others team.\n\n' +
       'Check your email for the confirmation and the video link.\n\n' +
       'Before the call, watch the short video at ' + location.origin + stepUrl(CONFIG.stepThanks);
 
     /* We need the booked slot to build a dated calendar file. GHL doesn't
-       append it automatically — you put it in the calendar's redirect URL
+       append it automatically, you put it in the calendar's redirect URL
        yourself using merge fields (see README):
 
          …/get-started/thanks/?event_start_time={{appointment.start_time}}
@@ -628,7 +628,7 @@
               '&text='    + encodeURIComponent(title) +
               '&details=' + encodeURIComponent(details);
       // With no dates Google still opens a prefilled event for the user to
-      // place — useful, so we always render this button.
+      // place, useful, so we always render this button.
       if (dated) g += '&dates=' + stamp(startD) + '/' + stamp(endD);
       gcal.href = g;
     }
