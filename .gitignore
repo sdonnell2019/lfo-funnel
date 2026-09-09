@@ -1,3 +1,8 @@
 # reference screenshots of the funnel we cloned — not part of the site
 _reference/
 .DS_Store
+# netlify-cli install, not site content
+node_modules/
+package.json
+package-lock.json
+.netlify/
