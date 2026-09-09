@@ -1,4 +1,4 @@
-# Static site — no build step. Netlify serves the repo as-is.
+# Static site. No build step. Netlify serves the repo as-is.
 [build]
   publish = "."
   command = ""
