@@ -33,8 +33,8 @@
     /* Funnel step paths, relative to wherever the site is mounted.
        BASE (computed below) turns these into real URLs, so the funnel works
        served from a domain root OR from a subpath like /lfo-funnel/. */
-    stepBook:   'get-started/book/',
-    stepThanks: 'get-started/thanks/',
+    stepBook:   'calendar/',
+    stepThanks: 'case-studies/',
 
     /* GHL calendar, Luke's Calendar (30 min). Widget id from the embed code. */
     ghlCalendarId: 'KjdM4H052HH3RCIGuB1M',
@@ -64,9 +64,9 @@
      ====================================================================== */
   var BASE = (function () {
     var p = location.pathname;
-    var i = p.indexOf('/get-started/');
-    if (i >= 0) return p.slice(0, i + 1);
-    var m = p.match(/^(.*\/)(privacy|terms)\/?$/);
+    /* every page sits exactly one directory below the mount point, so
+       stripping a known page segment yields the root */
+    var m = p.match(/^(.*\/)(viral|calendar|case-studies|privacy|terms)\/?$/);
     if (m) return m[1];
     return p.replace(/[^\/]*$/, '');
   })();
@@ -592,7 +592,7 @@
        append it automatically, you put it in the calendar's redirect URL
        yourself using merge fields (see README):
 
-         …/get-started/thanks/?event_start_time={{appointment.start_time}}
+         …/case-studies/?event_start_time={{appointment.start_time}}
                               &event_end_time={{appointment.end_time}}
 
        Several spellings are accepted so this keeps working if GHL's merge

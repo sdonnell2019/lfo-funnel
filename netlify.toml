@@ -3,20 +3,19 @@
   publish = "."
   command = ""
 
-# Directory URLs resolve to index.html automatically; these keep the funnel
-# reachable if someone drops the trailing slash.
+# Short aliases so ad links can be tidy.
 [[redirects]]
-  from = "/get-started"
-  to = "/get-started/about-you/"
+  from = "/apply"
+  to = "/viral/"
   status = 301
 
 [[redirects]]
-  from = "/apply"
-  to = "/get-started/about-you/"
+  from = "/book"
+  to = "/calendar/"
   status = 301
 
 # Long-cache the versioned assets, never cache the HTML, so a deploy is
-# visible immediately but repeat visitors don't refetch CSS/JS.
+# visible immediately but repeat visitors do not refetch CSS/JS.
 [[headers]]
   for = "/assets/*"
   [headers.values]
