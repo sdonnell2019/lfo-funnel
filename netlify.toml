@@ -6,7 +6,7 @@
 # Short aliases so ad links can be tidy.
 [[redirects]]
   from = "/apply"
-  to = "/viral/"
+  to = "/get-started/"
   status = 301
 
 [[redirects]]

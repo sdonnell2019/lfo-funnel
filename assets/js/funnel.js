@@ -66,7 +66,7 @@
     var p = location.pathname;
     /* every page sits exactly one directory below the mount point, so
        stripping a known page segment yields the root */
-    var m = p.match(/^(.*\/)(viral|calendar|case-studies|privacy|terms)\/?$/);
+    var m = p.match(/^(.*\/)(get-started|calendar|case-studies|privacy|terms)\/?$/);
     if (m) return m[1];
     return p.replace(/[^\/]*$/, '');
   })();
